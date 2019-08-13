@@ -1,34 +1,30 @@
 package com.rafi.regelseteditor;
 
-import com.rafi.regelseteditor.api.IRegelService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.rafi.regelseteditor.gui.demo.GridBagLayoutDemo;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.awt.*;
 
 @SpringBootApplication
 public class RegelsetEditorApplication implements CommandLineRunner {
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(RegelsetEditorApplication.class, args);
+		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(RegelsetEditorApplication.class)
+				.headless(false).run(args);
+
+		EventQueue.invokeLater(() -> {
+			// start gui here
+			GridBagLayoutDemo ex = ctx.getBean(GridBagLayoutDemo.class);
+		});
 	}
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		// start gui here
-	}
 
-//	@Bean
-//	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-//		return new CommandLineRunner() {
-//			@Override
-//			public void run(String... args) throws Exception {
-//				System.out.println("Hello World");
-//			}
-//		};
-//	}
+	}
 
 }
