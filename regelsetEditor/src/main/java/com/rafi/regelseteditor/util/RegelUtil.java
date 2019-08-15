@@ -31,7 +31,7 @@ public class RegelUtil {
 
     public static List<Regelkonf> getRegelkonfFromListByRegeldefId(List<Regelkonf> regelkonfList, Long regeldefId) {
         List<Regelkonf> returnList = regelkonfList.stream()
-                                        .filter(regelkonf -> regelkonf.getId().equals(regeldefId))
+                                        .filter(regelkonf -> regelkonf.getRegeldef().getId().equals(regeldefId))
                                         .collect(Collectors.toList());
         return returnList;
     }

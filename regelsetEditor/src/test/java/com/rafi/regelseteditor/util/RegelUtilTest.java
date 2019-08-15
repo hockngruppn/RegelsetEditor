@@ -43,7 +43,7 @@ public class RegelUtilTest {
         List<Regelparam> regelparamList = service.findAllRegelparams();
         Long regelparamdefId = 100111L;
         List<Regelparam> foundByRegelparamList = RegelUtil.getRegelparamFromListByRegelParamDefId(regelparamList, regelparamdefId);
-        Assert.assertEquals(4, foundByRegelparamList);
+        Assert.assertEquals(4, foundByRegelparamList.size());
     }
 
     @Test

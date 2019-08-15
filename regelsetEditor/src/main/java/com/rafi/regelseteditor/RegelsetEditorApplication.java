@@ -18,13 +18,14 @@ public class RegelsetEditorApplication implements CommandLineRunner {
 
 		EventQueue.invokeLater(() -> {
 			// start gui here
-			GridBagLayoutDemo ex = ctx.getBean(GridBagLayoutDemo.class);
+//			GridBagLayoutDemo ex = ctx.getBean(GridBagLayoutDemo.class);
+			GridBagLayoutDemo demo = new GridBagLayoutDemo();
 		});
 	}
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		
+
 	}
 
 }
