@@ -165,10 +165,10 @@ public class Regelset {
 
     @Override
     public String toString() {
-        return "Regelset{" +
+        return "Regelset [" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                '}';
+                ']';
     }
 
 }

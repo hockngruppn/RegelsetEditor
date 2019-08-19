@@ -156,10 +156,10 @@ public class Regelparam implements Serializable {
 
     @Override
     public String toString() {
-        return "Regelparam{" +
+        return "Regelparam [" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", value='" + value + '\'' +
-                '}';
+                ']';
     }
 }

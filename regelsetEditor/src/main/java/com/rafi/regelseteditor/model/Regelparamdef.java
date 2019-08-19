@@ -134,9 +134,9 @@ public class Regelparamdef implements Serializable {
 
     @Override
     public String toString() {
-        return "Regelparamdef{" +
+        return "Regelparamdef [" +
                 "id=" + id +
                 ", defaultvalue='" + defaultvalue + '\'' +
-                '}';
+                ']';
     }
 }

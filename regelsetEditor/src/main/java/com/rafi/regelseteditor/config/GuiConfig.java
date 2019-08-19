@@ -15,7 +15,7 @@ public class GuiConfig {
 
     @Bean
     public MainFrame getMainFrame() {
-        MainFrame main = new MainFrame();
+        MainFrame main = new MainFrame(service);
 //        main.setService(service);
         return main;
     }
