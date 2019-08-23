@@ -1,6 +1,8 @@
 package com.rafi.regelseteditor.api;
 
 import com.rafi.regelseteditor.model.*;
+import com.rafi.regelseteditor.util.RegelContainer;
+import com.rafi.regelseteditor.util.Regeldetail;
 
 import java.util.List;
 
@@ -23,20 +25,19 @@ public interface IRegelService {
     List<Regelparam> findRegelparamByRegelkonfId(Long regelkonfId);
 
     List<Regelparamdef> findRegelparamdefByRegeldefId(Long regeldefId);
-    Regelparamdef findRegelparamdefById(Long regelparamdefId);
 
+    /**
+     * gui uses this method to display a readable list of rules
+     * @param container {@link RegelContainer}
+     * @return Regeldetail object for representation in gui
+     */
+    List<Regeldetail> getRegeldetailList(RegelContainer container);
 
+    /**
+     * gui uses this method to collect all data for this ruleset
+     * @param set {@link Regelset}
+     * @return RegelContainer complete ruleset
+     */
+    RegelContainer getRegelContainer(Regelset set);
 
-//    Regelset findRegelset(Long regelsetId);
-//    Regelset findRegelsetByRegelsetName(String name);
-//    List<Regelset> findAllRegelsets();
-//    Regelkonf findRegelkonfByRegelkonfId(Long regelkonfId);
-//    List<Regelparam> findRegelparamByKonfId(Long regelkonfId);
-//    Regeldef findRegeldefByRegeldefId(Long regeldefId);
-//    Regeldef findRegeldefByRegelkonf(Regelkonf regelkonf);
-//    List<Regelparamdef> findRegelparamdefByRegeldefId(Long regeldefId);
-//    List<Regeldef> findRegelDefsByKategorie(String kategorie);
-//    Regeldef findRegelDefByClassname(String classname);
-//
-//    Regelkonf saveRegelkonf(Regelkonf regelkonf);
 }

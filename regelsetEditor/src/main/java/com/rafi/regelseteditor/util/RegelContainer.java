@@ -5,6 +5,9 @@ import com.rafi.regelseteditor.model.*;
 
 import java.util.List;
 
+/**
+* Beinhaltet sämtliche D
+ */
 public class RegelContainer {
     private Regelset regelset;
     private List<Regelkonf> regelkonfList;

@@ -1,9 +1,7 @@
 package com.rafi.regelseteditor;
 
 import com.rafi.regelseteditor.api.IRegelService;
-import com.rafi.regelseteditor.gui.MainFrame;
 import com.rafi.regelseteditor.gui.SetFrame;
-import com.rafi.regelseteditor.gui.demo.GridBagLayoutDemo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -24,8 +22,8 @@ public class RegelsetEditorApplication implements CommandLineRunner {
 //			GridBagLayoutDemo ex = ctx.getBean(GridBagLayoutDemo.class);
 //			GridBagLayoutDemo demo = new GridBagLayoutDemo();
 
-//			SetFrame frame = new SetFrame(ctx.getBean(IRegelService.class));
-			MainFrame frame = new MainFrame(ctx.getBean(IRegelService.class));
+			SetFrame frame = new SetFrame(ctx.getBean(IRegelService.class));
+//			MainFrame frame = new MainFrame(ctx.getBean(IRegelService.class));
 		});
 	}
 

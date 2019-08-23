@@ -1,8 +1,6 @@
 package com.rafi.regelseteditor.util;
 
-import com.rafi.regelseteditor.model.Regelkonf;
-import com.rafi.regelseteditor.model.Regelparam;
-import com.rafi.regelseteditor.model.Regelparamdef;
+import com.rafi.regelseteditor.model.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
