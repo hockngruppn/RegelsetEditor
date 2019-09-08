@@ -1,7 +1,9 @@
 package com.rafi.regelseteditor;
 
 import com.rafi.regelseteditor.api.IRegelService;
+import com.rafi.regelseteditor.gui.MainFrame;
 import com.rafi.regelseteditor.gui.SetFrame;
+import com.rafi.regelseteditor.gui.demo.GridBagLayoutDemo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
